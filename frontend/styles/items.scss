@@ -1,0 +1,41 @@
+@use 'variables';
+
+#items {
+    .card {
+        border: 0;
+        border-radius: 0;
+        cursor: pointer;
+
+        .shipping_image {
+            vertical-align: inherit;
+            margin-left: 5px;
+        }
+        
+        .item-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 4px;
+        }
+        .location {
+            font-size: 12px;
+            margin-top: 32px;
+        }
+        p {
+            margin: 0;
+            font-size: 18px;
+        }
+        .card-title {
+            font-size: 24px;
+            margin-bottom: 32px;
+            margin-top: 16px;
+            font-weight: normal;
+        }
+        hr {
+            height: 2px;
+            margin: 0 15px;
+            background-color: variables.$ligth-gray;
+        }
+    }
+    
+    
+}

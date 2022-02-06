@@ -1,0 +1,18 @@
+@use 'variables';
+
+#item {
+    background-color: white;
+    
+    img {
+        height: 680px;
+    }
+
+    .row {
+        padding-top: 32px;
+    }
+
+    .right {
+        padding-right: 32px;
+    }
+    
+}
