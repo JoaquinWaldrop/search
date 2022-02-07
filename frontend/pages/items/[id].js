@@ -9,7 +9,7 @@ function Item({ data }) {
   return (<Container id="item">
     <Row>
         <Col xs="12" sm="9" className="d-flex justify-content-center">
-            <Image src= {data.item.picture}></Image>
+            <Image src= {data.item.picture} alt={data.item.title}></Image>
         </Col>
         <Col className="right" xs="12" sm="3">
             <p> { data.item.condition === 'new' ? 'Nuevo' : 'Usado' } - { data.item.sold_quantity } vendidos </p> 

@@ -22,7 +22,7 @@ function Items({ data }) {
               <Container fluid>
                 <Row>
                   <Col xs="auto">
-                    <Image className="item-image" src={row.picture}></Image>
+                    <Image className="item-image" src={row.picture} alt={row.title}></Image>
                   </Col>
                   <Col xs="7">
                     <Card.Title> { row.price.currency } { row.price.amount }.{ row.price.decimals } { row.free_shipping ? <Image className="shipping_image" src="/ic_shipping.png"></Image> : null }</Card.Title>

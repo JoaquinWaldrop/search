@@ -34,7 +34,7 @@ export default function Layout({ children }) {
 			<Navbar expand="lg">
 				<Container>
 					<Navbar.Brand href="/">
-						<Image src="/Logo_ML.png"></Image>
+						<Image src="/Logo_ML.png" alt="logo"></Image>
 					</Navbar.Brand>
 					<InputGroup>
 						<FormControl placeholder="Nunca dejes de buscar" aria-label="Nunca dejes de buscar" aria-describedby="search" onChange={event => setSearch(event.target.value)} onKeyPress={ event => handleKeyPress(event)} />
