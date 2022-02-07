@@ -28,7 +28,7 @@ router.get('/', async function(req, res, next) {
       })
     });
   } catch (error) {
-    res.send(new Error("error"))
+    next(error);
   }
 });
 
@@ -57,7 +57,7 @@ router.get('/:id', async function(req, res, next) {
       }
     });
   } catch (error) {
-    console.log(error)
+    next(error);
   }
 });
 

@@ -4,8 +4,6 @@ import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button'
 
-import { useAppContext } from '../../components/layout'
-
 
 function Item({ data }) {
   return (<Container id="item">
@@ -37,9 +35,13 @@ function Item({ data }) {
 }
 
 Item.getInitialProps = async (context) => {
-  const res = await fetch(`http://localhost:3000/api/items/${context.query.id}`)
-  const data = await res.json()
-  return { data }
+	try {
+		const res = await fetch(`http://localhost:3000/api/items/${context.query.id}`)
+		const data = await res.json()
+		return { data }
+	} catch (error) {
+		console.log(error)
+	}
 }
 
 export default Item

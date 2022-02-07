@@ -44,9 +44,13 @@ function Items({ data }) {
 }
 
 Items.getInitialProps = async (context) => {
-  const res = await fetch(`http://localhost:3000/api/items?q=${context.query.search}`)
-  const data = await res.json()
-  return { data }
+  try {
+    const res = await fetch(`http://localhost:3000/api/items?q=${context.query.search}`)
+    const data = await res.json()
+    return { data }
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 export default Items
