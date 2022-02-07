@@ -19,23 +19,39 @@
         .location {
             font-size: 12px;
             margin-top: 32px;
+            color: variables.$hard-gray;
         }
-        p {
+        .name {
             margin: 0;
             font-size: 18px;
+            color: variables.$black;
         }
         .card-title {
             font-size: 24px;
             margin-bottom: 32px;
             margin-top: 16px;
-            font-weight: normal;
+            font-weight: 300;
+            color: variables.$black;
         }
         hr {
-            height: 2px;
+            height: 1px;
             margin: 0 15px;
-            background-color: variables.$ligth-gray;
+            background-color: variables.$medium-gray;
         }
     }
-    
-    
+
+    #breadcrumb {
+        padding: 16px 0;
+        margin-left: 0;
+        font-size: 12px;
+        color: variables.$medium-gray;
+        
+        .separator {
+            margin: 0 5px;
+        }
+
+        .col-auto {
+            padding: 0;
+        }
+    }    
 }

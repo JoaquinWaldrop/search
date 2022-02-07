@@ -1,5 +1,12 @@
 @use 'variables';
 
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+
 // global styles
 html,
 body {
@@ -26,8 +33,24 @@ a {
     .form-control {
         border: 0;
         font-size: 18px;
+        color: variables.$black;
         &:hover, &:focus {
             box-shadow: none;
+        }
+
+        &::-webkit-input-placeholder {
+          color: variables.$medium-gray;
+          font-size: 18px;
+        }
+
+        &::-moz-placeholder {
+          color: variables.$medium-gray;
+          font-size: 18px;
+        }
+
+        &::-ms-input-placeholder {
+          color: variables.$medium-gray;
+          font-size: 18px;
         }
     }
 

@@ -1,18 +1,58 @@
 @use 'variables';
 
 #item {
-    background-color: white;
     
     img {
-        height: 680px;
+        width: 680px;
     }
 
     .row {
         padding-top: 32px;
+        background-color: white;
+        margin: 0;
     }
 
     .right {
         padding-right: 32px;
+
+        .btn {
+            border: none;
+            background-color: variables.$blue;
+            margin-top: 32px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 14px;
+            color: variables.$hard-gray;
+        }
+
+        h2 {
+            margin-bottom: 32px;
+            font-size: 24px;
+            color: variables.$black;
+        }
+
+        h1 {
+            font-size: 46px;
+            margin-bottom: 0;
+            font-weight: 300;
+            color: variables.$black;
+        }
+    }
+
+    .description-title {
+        font-weight: normal;
+        font-size: 28px;
+        color: variables.$black;
+        margin-left: 32px;
+    }
+
+    .description-text {
+        font-weight: normal;
+        color: variables.$medium-gray;
+        font-size: 16px;
+        margin-left: 32px;
     }
     
 }

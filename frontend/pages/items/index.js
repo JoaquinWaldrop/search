@@ -6,8 +6,14 @@ import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 
 function Items({ data }) {
-  console.log(data)
   return (<Container id="items">
+    <Row id="breadcrumb">
+      { data.categories.map( (category, index) => { return (
+        <Col xs="auto" key={index}>
+          { category } { index != (data.categories.length - 1) ? <span className="separator"> &gt; </span>  : null}
+        </Col>
+      )})}
+    </Row>
     { data.items.map( (row, index) => {
       return (
         <Link href={`/items/${row.id}`} key={ row.id }>
@@ -20,8 +26,8 @@ function Items({ data }) {
                   </Col>
                   <Col xs="7">
                     <Card.Title> { row.price.currency } { row.price.amount }.{ row.price.decimals } { row.free_shipping ? <Image className="shipping_image" src="/ic_shipping.png"></Image> : null }</Card.Title>
-                    <p> { row.title }</p>
-                    <p> { row.condition === 'new' ? 'Nuevo' : 'Usado' }</p>
+                    <p className="name"> { row.title }</p>
+                    <p className="name"> { row.condition === 'new' ? 'Nuevo' : 'Usado' }</p>
                   </Col>
                   <Col>
                   <p className="location"> { row.location }</p>
