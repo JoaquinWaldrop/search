@@ -3,6 +3,8 @@
 First, run the development server:
 
 ```bash
+npm install
+
 #For linux-based computers
 DEBUG=server:* npm start
 # or for MS-based computers
