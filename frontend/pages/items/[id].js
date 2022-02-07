@@ -3,10 +3,16 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button'
+import Head from 'next/head'
 
 
 function Item({ data }) {
   return (<Container id="item">
+    <Head>
+      <title>Detalle - {data.item.title}</title>
+      <meta name="description" content="Detalle del producto" />
+      <link rel="icon" href="/Logo_ML.png" />
+    </Head>
     <Row>
         <Col xs="12" sm="9" className="d-flex justify-content-center">
             <Image src= {data.item.picture} alt={data.item.title}></Image>

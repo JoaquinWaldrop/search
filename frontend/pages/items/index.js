@@ -1,12 +1,19 @@
 import Container from 'react-bootstrap/Container'
 import Link from 'next/link'
+import Head from 'next/head'
 import Card from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 
+
 function Items({ data }) {
   return (<Container id="items">
+    <Head>
+      <title>Mercado Libre Challenge - Listado</title>
+      <meta name="description" content="Listado de productos" />
+      <link rel="icon" href="/Logo_ML.png" />
+    </Head>
     <Row id="breadcrumb">
       { data.categories.map( (category, index) => { return (
         <Col xs="auto" key={index}>
